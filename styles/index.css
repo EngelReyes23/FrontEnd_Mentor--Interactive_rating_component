@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* Primary */
+	--Orange: #fb7413;
+
+	/* Neutral */
+	--White: #ffffff;
+	--Light_Grey: #959eac;
+	--Medium_Grey: #7c8798;
+	--Dark_Blue: #252d37;
+	--Very_Dark_Blue: #121417;
+}
+
+body {
+	font-family: 'Overpass', sans-serif;
+	color: var(--White);
+}
+
+.hidden {
+	display: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.selected {
+	background-color: var(--Orange) !important;
+	filter: none !important;
+	color: var(--White) !important;
+}
+
+.illustration {
+	display: block;
+	margin: 1.5rem auto;
+}
+
+.container {
+	background-color: var(--Very_Dark_Blue);
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.card {
+	/* display: flex;
+	flex-direction: column; */
+	gap: 0.5rem;
+	max-width: 345px;
+	background-color: var(--Dark_Blue);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.icon {
+	background-color: var(--Dark_Blue);
+	filter: brightness(1.75);
+	color: var(--Orange);
+	border-radius: 100%;
+	padding: 0.8rem;
+	display: inline-block;
+}
+
+.card__title {
+	font-weight: 700;
+	font-size: x-large;
+	color: var(--White);
+}
+
+.card__paragraph {
+	font-size: 15px;
+	color: var(--Light_Grey);
+	line-height: 1.5;
+}
+
+.buttonList {
+	margin-top: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.buttonItem {
+	background-color: var(--Dark_Blue);
+	filter: brightness(1.75);
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border: none;
+	padding: 1rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--Light_Grey);
+	cursor: pointer;
+}
+
+.buttonItem:hover {
+	background-color: var(--Medium_Grey);
+	color: var(--Very_Dark_Blue);
+}
+
+.card__button {
+	background-color: var(--Orange);
+	width: 100%;
+	border-radius: 45px;
+	border: none;
+	padding: 0.8rem 1rem;
+	text-align: center;
+	color: var(--White);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card__button:hover {
+	background-color: var(--White);
+	color: var(--Orange);
+}
+
+.punctuation {
+	border-radius: 45px;
+	margin: 1.5rem auto;
+	width: max-content;
+	padding: 0.5rem 1rem;
+	color: var(--Orange);
+	background-color: var(--Dark_Blue);
+	filter: brightness(1.5);
+	text-align: center;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1024px) {
+	.card {
+		max-width: 410px;
+		padding: 2.1rem;
+	}
+
+	.card__title {
+		font-size: x-large;
+	}
+}
